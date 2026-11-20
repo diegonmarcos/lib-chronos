@@ -14,7 +14,3 @@ Interactive HTML simulators of cycles across scales. Live: https://diegonmarcos.
 | 4 | Astronomy - Astrological Sphere | `Chronos/4.Astronomy-Astrological-sphere/` |
 
 Deploy: every push to `main` publishes `Chronos/` to GitHub Pages (`.github/workflows/ship.yml`).
-
-## Third-party licence notes
-
-`Chronos/2.Milkwaysphere-Orbits/` vendors three.js r128 (`three.min.js`, `OrbitControls.js`), MIT licensed, copyright three.js authors. See `Chronos/2.Milkwaysphere-Orbits/VENDOR.md` and `THREE-LICENSE.txt`. The repository's own content stays under the PolyForm Noncommercial licence in `LICENSE`.
