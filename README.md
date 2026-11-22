@@ -14,3 +14,5 @@ Interactive HTML simulators of cycles across scales. Live: https://diegonmarcos.
 | 4 | Astronomy - Astrological Sphere | `Chronos/4.Astronomy-Astrological-sphere/` |
 
 Deploy: every push to `main` publishes `Chronos/` to GitHub Pages (`.github/workflows/ship.yml`).
+
+Sibling project: Sacred Geometry in `Sacred-geo/` (index.html is the 3D explorer, topics.md the curriculum).
