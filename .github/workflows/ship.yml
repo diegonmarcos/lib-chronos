@@ -18,9 +18,15 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      # Chronos stays at the site root (its published URLs do not move); Sacred-geo is its sibling path, /Sacred-geo/
+      - name: Assemble the site
+        run: |
+          mkdir -p _site/Sacred-geo
+          cp -a Chronos/. _site/
+          cp -a Sacred-geo/. _site/Sacred-geo/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: Chronos
+          path: _site
   deploy:
     environment:
       name: github-pages
