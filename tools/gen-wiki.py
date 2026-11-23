@@ -170,6 +170,10 @@ def build(root):
             for l in re.findall(r"\[\[([^\]\s]+)\]\]", text):
                 if l not in ids:
                     raise Bad("a page of topic %s links to unknown page %s" % (t["id"], l))
+    for h in hubs + projects:
+        for l in re.findall(r"\[\[([^\]\s]+)\]\]", h["intro"]):
+            if l not in ids:
+                raise Bad("the intro of %s links to unknown page %s" % (h["id"], l))
     return {"schemaVersion": 2, "_doc": DOC, "menu": menu, "hubs": hubs, "topics": topics, "projects": projects}
 
 
