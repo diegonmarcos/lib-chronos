@@ -1,0 +1,16 @@
+name: Wiki tree (gen-wiki --check, tree = menu, determinism)
+# #1867 the folder tree is Cloud Wiki's content: wiki.json must be what tools/gen-wiki.py makes of it, byte for byte
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test the wiki tree
+        run: bash tools/test-wiki-tree.sh
